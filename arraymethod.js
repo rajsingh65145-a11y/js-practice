@@ -69,8 +69,14 @@ let cart = [
 ];
 
 
-let p= cart.map(function(prices){
-    return prices;
+let p= cart.map(function(obj){
+    return obj.price;
 })
 
 console.log(p);
+
+let total=p.reduce(function(acc,pi){
+  return acc+pi;
+},0);
+
+console.log(total);
